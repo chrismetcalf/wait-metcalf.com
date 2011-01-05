@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <%# Blueprint %>
+    <link rel="stylesheet" type="text/css" href="/css/blueprint/screen.css" media="screen, projection" />
+    <link rel="stylesheet" type="text/css" href="/css/blueprint/print.css" media="print" />
+    <!--[if lt IE 8]><link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+    <%# My Styles %>
+    <link rel="stylesheet" type="text/css" href="/css/styleee.css" media="screen, projection" />
+
+    <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/feed/" />
+
+    <%# Meta! %>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>wait-metcalf.com</title>
+  </head>
+  <body class="<%= @path.gsub(/\//, '_') %>">
+    <div class="container">
+      <hr class="space">
+
+      <%# Content %>
+      <div class="span-20 prepend-2">
+        <h1 class="header">Wait-Metcalf, 2012</h1>
+
+        <h2 class="itscoming">2012... it's coming...</h2>
+
+        <%= yield %>
+
+      </div>
+    </div>
+  </body>
+</html>
+

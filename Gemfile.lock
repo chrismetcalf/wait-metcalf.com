@@ -1,0 +1,36 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (2.1.2)
+    capistrano (2.5.19)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.0.0)
+    git-deploy (0.4.1)
+      capistrano (~> 2.5.9)
+    highline (1.6.1)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.0.23)
+    net-ssh-gateway (1.0.1)
+      net-ssh (>= 1.99.1)
+    rack (1.2.1)
+    rack-rewrite (1.0.2)
+    rdiscount (1.6.5)
+    toto (0.4.6)
+      builder
+      rack
+      rdiscount
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  capistrano (= 2.5.19)
+  git-deploy (= 0.4.1)
+  rack-rewrite (= 1.0.2)
+  toto (= 0.4.6)
