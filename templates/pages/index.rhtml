@@ -1,14 +1,8 @@
 <div class="span-20">
-  <div class="span-14 colborder posts">
+  <div class="span-20 posts">
     <%# Last Article %>
     <div class="post latest">
       <h2><a href="<%= articles.first.path %>"><%= articles.first.title %></a></h2>
-
-      <div class="buttons">
-        <a href="http://twitter.com/home?status=<%= ::CGI::escape "\"#{articles.first.title}\" - #{articles.first.permalink}" %>"><img src="/images/icons/twitter_16.png" alt="Share on Facebook"/></a>
-        <a href="http://www.facebook.com/share.php?u=<%= articles.first.permalink %>"><img src="/images/icons/facebook_16.png" alt="Share on Facebook"/></a>
-        <a href="http://reddit.com/submit?url=<%= articles.first.permalink %>&title=<%= articles.first.title %>"><img src="/images/icons/reddit_16.png" alt="Post to Reddit"/></a>
-      </div>
 
       <div class="meta">
         <div class="date"><em>posted:</em> <%= articles.first.date %></div>
@@ -20,32 +14,15 @@
       <div class="more"><a href="<%= articles.first.path %>">read more &raquo;</a></div>
     </div>
 
-    <hr />
+    <% if articles.count > 1 %>
+      <hr/>
 
-    <h2>Looking for something?:</h2>
-    <div id="cse" style="width: 100%;">Loading</div>
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script type="text/javascript">
-      google.load('search', '1', {language : 'en'});
-      google.setOnLoadCallback(function() {
-        var customSearchControl = new google.search.CustomSearchControl('005449845469285925866:zkvcqlx5wcw');
-        customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-        customSearchControl.draw('cse');
-      }, true);
-    </script>
-    <link rel="stylesheet" href="http://www.google.com/cse/style/look/minimalist.css" type="text/css" />
-  </div>
-
-  <%# Sidebar %>
-  <div class="span-4 sidebar">
-    <h3>Recent Posts:</h3>
-    <ul class="recent-posts">
-      <% articles[1...11].each do |article| %>
-        <li>
-          <a href="<%= article.path %>"><%= article.title %></a>
-        </li>
-      <% end %>
-    </ul>
-    <p class="archives"><a href="/archives">Archives...</a></p>
+      <h3>Recent Posts:</h3>
+      <div class="recent-posts">
+        <% articles[1...11].each do |article| %>
+          <h4><a href="<%= article.path %>"><%= article.title %></a></h4>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -1,3 +1,8 @@
+body {
+  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-size: 12px;
+}
+
 a {
   color: #000;
 }
@@ -7,18 +12,12 @@ a:visited {
 }
 
 .header {
-  height: 268px;
-  width: 790px;
-  background: url("/images/ring.jpg");
+  height: 341px;
+  width: 800px;
+  background: url("/images/branch.png");
   text-indent: -9999px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.itscoming {
-  text-align: center;
-  color: #ddd;
-  font-size: 130%;
 }
 
 /* Stolen from blueprint's fancy-type */
@@ -31,11 +30,15 @@ a:visited {
 }
 
 .header-quote {
+  display: block;
   font-size: 120%;
   line-height: 140%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
 }
 
-.specialization {
+.fancy {
   font-size: 130%;
 }
 
@@ -47,51 +50,21 @@ a:visited {
   display: block;
   height: 1.4em;
   list-style: none;
-  margin: 0;
-  padding-bottom: 0.8em;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0.8em;
+  margin: 0 auto;
+  padding: 0.8em 0;
+  width: 250px;
 }
 
 .nav li {
-  float: left;
-  padding-right: 20px;
+  float: left; padding-right: 20px;
 }
 
 .nav li a {
-  text-decoration: none;
   color: #000;
 }
 
 .nav li a.current {
   font-weight: bold;
-}
-
-/* Icons */
-.blog {
-  padding: 2px 0px 2px 20px;
-  background: transparent url(/images/icons/rss_16.png) no-repeat center left;
-}
-
-.github {
-  padding: 2px 0px 2px 22px;
-  background: transparent url(/images/icons/octocat_22.png) no-repeat center left;
-}
-
-.flickr {
-  padding: 2px 0px 2px 20px;
-  background: transparent url(/images/icons/flickr_16.png) no-repeat center left;
-}
-
-.email {
-  padding: 2px 0px 2px 20px;
-  background: transparent url(/images/icons/email_16.png) no-repeat center left;
-}
-
-.linkedin {
-  padding: 2px 0px 2px 20px;
-  background: transparent url(/images/icons/linkedin_16.png) no-repeat center left;
 }
 
 /* Blog Styles */
@@ -144,6 +117,15 @@ a:visited {
 
 .content img {
   border: 1px solid black;
+  margin: 0.75em;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
 }
 
 .powered-by {

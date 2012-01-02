@@ -9,13 +9,12 @@ use Rack::CommonLogger
 
 # Rack config
 use Rack::Rewrite do
-  # We want the homepage to be our welcome page, and the blog to be /blog
-  rewrite '/', '/home'
-  rewrite %r{/blog/?$}, '/index'
-
   # Feed URLs
   rewrite '/atom.xml', 'index.xml'
-  #r302 '/feed/', 'http://feeds.feedburner.com/chrismetcalf'
+  r302 '/feed/', 'http://feeds.feedburner.com/wait-metcalf'
+
+  # Shorcuts
+  r302 %r{^/the-(lucky-)?couple/?}, '/2012/01/02/the-lucky-couple/'
 end
 
 if ENV['RACK_ENV'] == 'development'
@@ -38,11 +37,11 @@ toto = Toto::Server.new do
   set :error, lambda { |code|
     case code
     when 404
-      "These are not the droids you are looking for... (404)"
+      "Excuse me sir, but I think you've gotten lost... (404)"
     when 500
-      "I would much rather have gone with Master Luke than stay here with you. I don't know what all this trouble is about, but I'm sure it must be your fault. (500)"
+      "You've ruined it!!! (500)"
     else
-      "Hokey religions and ancient weapons are no match for a good blaster at your side, kid."
+      "Well I just don't know what to tell you here..."
     end
   }
 end
