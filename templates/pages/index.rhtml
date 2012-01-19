@@ -20,7 +20,7 @@
       <h3>Recent Posts:</h3>
       <div class="recent-posts">
         <% articles[1...11].each do |article| %>
-          <h4><a href="<%= article.path %>"><%= article.title %></a></h4>
+          <h4><a href="<%= article.path %>"><%= article.title %></a> <span class="meta">(<%= article.date %>)</span></h4>
         <% end %>
       </div>
     <% end %>

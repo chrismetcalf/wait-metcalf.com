@@ -12,9 +12,6 @@ use Rack::Rewrite do
   # Feed URLs
   rewrite '/atom.xml', 'index.xml'
   r302 '/feed/', 'http://feeds.feedburner.com/wait-metcalf'
-
-  # Shorcuts
-  r302 %r{^/the-(lucky-)?couple/?}, '/2012/01/02/the-lucky-couple/'
 end
 
 if ENV['RACK_ENV'] == 'development'
@@ -26,7 +23,6 @@ end
 #
 toto = Toto::Server.new do
   set :date,        lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
-  #set :root,        "home"
   set :markdown,    :smart
   set :summary,     :max => 150, :delim => /~/
   set :title,       Dir.pwd.split('/').last
@@ -44,6 +40,15 @@ toto = Toto::Server.new do
       "Well I just don't know what to tell you here..."
     end
   }
+
+  # Magic to allow me to use Markdown for static pages
+  set :to_html, lambda {|path, page, ctx|
+    if File.exists? "#{path}/#{page}.txt"
+      Markdown.new(File.read("#{path}/#{page}.txt").strip).to_html
+    else
+      ERB.new(File.read("#{path}/#{page}.rhtml")).result(ctx)
+    end
+  },
 end
 
 run toto

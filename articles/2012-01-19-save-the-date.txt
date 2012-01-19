@@ -1,0 +1,11 @@
+--- 
+title: Save the Date
+date: 19/01/2012
+
+<img src="/images/photos/ring.jpg" alt="The Ring" class="center" />
+
+<h2 class="center">22nd of September, 2012</h2>
+<h3 class="center">Rochester, NY</h3>
+
+<a href="/the-event/" class="center">More details...</a>
+

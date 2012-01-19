@@ -1,0 +1,9 @@
+## The Venue
+
+![Artisan Works](/images/photos/artisan-works.png)
+
+[Artisan Works](http://www.artisanworks.net/)  
+565 Blossom Road # L  
+Rochester, NY 14610-1859  
+
+<iframe width="600" height="425" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="margin:0.75em" src="http://maps.google.com/maps?ie=UTF8&amp;q=Artisan+Works&amp;fb=1&amp;gl=us&amp;hq=Artisan+Works&amp;hl=en&amp;view=map&amp;cid=134749996637329026&amp;t=m&amp;vpsrc=6&amp;ll=43.153509,-77.553735&amp;spn=0.010958,0.018239&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><a href="http://maps.google.com/maps?ie=UTF8&amp;q=Artisan+Works&amp;fb=1&amp;gl=us&amp;hq=Artisan+Works&amp;hl=en&amp;view=map&amp;cid=134749996637329026&amp;t=m&amp;vpsrc=6&amp;ll=43.153509,-77.553735&amp;spn=0.010958,0.018239&amp;z=15&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a>

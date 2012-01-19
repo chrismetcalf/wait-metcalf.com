@@ -1,6 +1,6 @@
 body {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 a {
@@ -9,6 +9,10 @@ a {
 
 a:visited {
   color: #333;
+}
+
+ul {
+  list-style-position: inside;
 }
 
 .header {
@@ -52,7 +56,7 @@ a:visited {
   list-style: none;
   margin: 0 auto;
   padding: 0.8em 0;
-  width: 250px;
+  width: 450px;
 }
 
 .nav li {
@@ -91,23 +95,12 @@ a:visited {
   margin-bottom: 1em;
 }
 
-.post h2 {
+h2 {
   margin-bottom: 0;
 }
 
-.post h2 a {
+h2 a {
   text-decoration: none;
-}
-
-.sidebar ul.recent-posts {
-  list-style-type: none;
-  padding-left: 0.5em;
-  margin: 0;
-  font-size: 90%;
-}
-
-.sidebar ul.recent-posts li {
-  margin-bottom: 0.5em;
 }
 
 .buttons, .buttons .tweet, .buttons .like{
@@ -115,7 +108,7 @@ a:visited {
   float: right;
 }
 
-.content img {
+img.framed {
   border: 1px solid black;
   margin: 0.75em;
 }
@@ -137,5 +130,13 @@ a:visited {
 }
 
 .powered-by a {
-  color: #ddd;
+  color: #eee;
 }
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
