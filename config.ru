@@ -48,7 +48,7 @@ toto = Toto::Server.new do
     else
       ERB.new(File.read("#{path}/#{page}.rhtml")).result(ctx)
     end
-  },
+  }
 end
 
 run toto
