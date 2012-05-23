@@ -9,4 +9,5 @@ gem "git-deploy", "0.4.1"
 group :development do
   gem "thin"
   gem "shotgun"
+  gem "rake"
 end

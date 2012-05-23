@@ -22,6 +22,7 @@ GEM
       net-ssh (>= 1.99.1)
     rack (1.2.1)
     rack-rewrite (1.0.2)
+    rake (0.9.2.2)
     rdiscount (1.6.5)
     shotgun (0.8)
       rack (>= 1.0)
@@ -41,6 +42,7 @@ DEPENDENCIES
   capistrano (= 2.5.19)
   git-deploy (= 0.4.1)
   rack-rewrite (= 1.0.2)
+  rake
   shotgun
   thin
   toto (= 0.4.6)
